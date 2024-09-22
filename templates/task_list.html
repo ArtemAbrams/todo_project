@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>My Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.title }} - {% if task.completed %}Completed{% else %}Not Completed{% endif %}</li>
+        {% empty %}
+            <li>No tasks available</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
